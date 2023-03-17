@@ -12,11 +12,14 @@ entertainment = ["Zipline","Waterpark","Hiking","Shopping","Snorkling"]
 def dest_options (destination):
     i = True
     while i == True:
-        dest_choice = input(f"How does {random.choice(destination)} sound for your destination?: y/n  ").lower()
+        display_dest_choice = random.choice(destination)
+        dest_choice = input(f"How does {display_dest_choice} sound for your destination?: y/n  ").lower()
         if dest_choice == "n":
-            print ("Okay, let's try again.")
+            print ("Okay, let's try another option...")
+            print (" ")
         else:
-            print("Great, let's move on to the next feature of your trip!")       
+            print(f"Great choice, I love {display_dest_choice} too!")
+            print (" ")       
             i = False
     return dest_choice
 
@@ -36,7 +39,7 @@ def rest_options (restaurants):
 
 # Transportation Options Function
 
-#def trans_options (transporation):
+# def trans_options (transporation):
  #    i==True
 
                  
