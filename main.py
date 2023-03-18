@@ -35,9 +35,24 @@ def rest_options (restaurants):
             else:
                  print (f"Great choice, I love {display_rest}!")
                  i = False
-    return rest_choice
+    return display_rest
 
 # Transportation Options Function
+
+def trans_options (transportation):
+     i = True
+     while i == True:
+            display_trans=random.choice(transportation)
+            trans_choice = input(f"Does using {display_trans} transportation work for you today?: y/n  ").lower()
+            if trans_choice == "n":
+               print("Okay, let's try another transportation option for you today...")
+               print (" ")
+            else:
+                 print(f"Great chioice, I also enjoy {display_trans} while I'm vacationing!")
+                 print (" ")
+                 i = False
+    return display_trans
+
 
 # def trans_options (transporation):
  #    i==True
@@ -51,3 +66,5 @@ def rest_options (restaurants):
 final_dest = dest_options(destination)
 print(" ")
 final_rest = rest_options(restaurants)
+print (" ")
+final_trans = trans_options(transportation)
