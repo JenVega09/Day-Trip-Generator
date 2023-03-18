@@ -32,39 +32,54 @@ def rest_options (restaurants):
             rest_choice = input (f"How does {display_rest} sound for your restaurant today?: y/n  ").lower()
             if rest_choice == "n":
                  print ("Okay, let's try another restaurant option...")
+                 print (" ")
             else:
                  print (f"Great choice, I love {display_rest}!")
+                 print (" ")
                  i = False
     return display_rest
 
 # Transportation Options Function
 
 def trans_options (transportation):
-     i = True
-     while i == True:
-            display_trans=random.choice(transportation)
-            trans_choice = input(f"Does using {display_trans} transportation work for you today?: y/n  ").lower()
-            if trans_choice == "n":
-               print("Okay, let's try another transportation option for you today...")
-               print (" ")
-            else:
-                 print(f"Great chioice, I also enjoy {display_trans} while I'm vacationing!")
-                 print (" ")
-                 i = False
+    i = True
+    while i == True:
+        display_trans=random.choice(transportation)
+        trans_choice = input(f"Does using {display_trans} transportation work for you today?: y/n  ").lower()
+        if trans_choice == "n":
+            print("Okay, let's try another transportation option for you today...")
+            print (" ")
+        else:
+            print(f"Great chioice, I also enjoy {display_trans} while I'm vacationing!")
+            print (" ")
+            i = False
     return display_trans
 
 
-# def trans_options (transporation):
- #    i==True
+def enter_options(entertainment):
+    i = True
+    while i == True:
+        display_enter = random.choice(entertainment)
+        enter_choice = input(f"Does {display_enter} sound like fun to do today?: y/n  ").lower()
+        if enter_choice == "n":
+            print ("Okay, let's look at another fun activitiy to do today...")
+            print (" ")
+        else:
+            print (f"Great choice, {display_enter} sounds like a blast!")
+            print (" ")
+            i = False
+    return display_enter
 
-                 
+                        
 
 
 
 
 
 final_dest = dest_options(destination)
-print(" ")
+
 final_rest = rest_options(restaurants)
-print (" ")
+
 final_trans = trans_options(transportation)
+
+final_enter = enter_options(entertainment)
