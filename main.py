@@ -6,6 +6,7 @@ destination = ["Jamaica","Costa Rica","San Francisco","San Antonio","Milwaukee"]
 restaurants = ["Just Natural","Rasta Aide","Paloma","Cattleman's Steakhouse","Lake Park Bistro"]
 transportation = ["Uber", "Car", "Segway", "Bike", "Walking"]
 entertainment = ["Zipline","Waterpark","Hiking","Shopping","Snorkling"]
+final_day_trip = {"destination":"","restaurants":"","transportation":"","entertainment":""}
 
 # Destination Function
 
@@ -21,7 +22,7 @@ def dest_options (destination):
             print(f"Great choice, I love {display_dest_choice} too!")
             print (" ")       
             i = False
-    return dest_choice
+    return display_dest_choice
 
 # Restaurant Function
 
@@ -55,7 +56,6 @@ def trans_options (transportation):
             i = False
     return display_trans
 
-
 def enter_options(entertainment):
     i = True
     while i == True:
@@ -68,18 +68,16 @@ def enter_options(entertainment):
             print (f"Great choice, {display_enter} sounds like a blast!")
             print (" ")
             i = False
-    return display_enter
+    return display_enter                   
 
-                        
+# final_dest = dest_options(destination)
+# final_rest = rest_options(restaurants)
+# final_trans = trans_options(transportation)
+# final_enter = enter_options(entertainment)
 
+final_day_trip["destination"] = dest_options(destination)
+final_day_trip["restaurants"] = rest_options(restaurants)
+final_day_trip["transportation"] = trans_options(transportation)
+final_day_trip["entertainment"] = enter_options(entertainment)
 
-
-
-
-final_dest = dest_options(destination)
-
-final_rest = rest_options(restaurants)
-
-final_trans = trans_options(transportation)
-
-final_enter = enter_options(entertainment)
+print (f"Looks like you will be using {final_day_trip['transportation']} to explore {final_day_trip['destination']}, eating dinner at {final_day_trip['restaurants']} and {final_day_trip['entertainment']} for fun.")
