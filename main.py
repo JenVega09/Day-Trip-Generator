@@ -1,9 +1,9 @@
 import random
 
-destination = ["Jamaica","Costa Rica","San Francisco","San Antonio","Milwaukee"]
+destination = ["Negril, Jamaica","Punta Uva, Costa Rica","San Francisco, California","Puerto Vallarta, Mexico","Accra, Ghana"]
 restaurants = ["Just Natural","Rasta Aide","Paloma","Cattleman's Steakhouse","Lake Park Bistro"]
 transportation = ["Ubering", "driving", "segwaying", "biking", "walking"]
-entertainment = ["ziplining","sightseeing","hiking","shopping","snorkling"]
+entertainment = ["ziplining","sightseeing","hiking","laying in the sun","snorkling"]
 final_day_trip = {"destination":"","restaurants":"","transportation":"","entertainment":""}
 
 # Destination Function
@@ -12,7 +12,7 @@ def dest_options (destination):
     i = True
     while i == True:
         display_dest_choice = random.choice(destination)
-        dest_choice = input(f"How does {display_dest_choice} sound for your destination?: y/n  ").lower()
+        dest_choice = input(f"How does the destination {display_dest_choice} sound for your day trip?: y/n  ").lower()
         if dest_choice == "n":
             print ("Okay, let's try another option...")
             print (" ")
@@ -44,7 +44,7 @@ def trans_options (transportation):
     i = True
     while i == True:
         display_trans=random.choice(transportation)
-        trans_choice = input(f"Does {display_trans} transportation work for you today?: y/n  ").lower()
+        trans_choice = input(f"Does {display_trans} work as your transportation for your trip?: y/n  ").lower()
         if trans_choice == "n":
             print("Okay, let's try another transportation option for you today...")
             print (" ")
@@ -58,7 +58,7 @@ def enter_options(entertainment):
     i = True
     while i == True:
         display_enter = random.choice(entertainment)
-        enter_choice = input(f"Does {display_enter} sound like fun to do today?: y/n  ").lower()
+        enter_choice = input(f"Does {display_enter} sound like something you'd like to do today?: y/n  ").lower()
         if enter_choice == "n":
             print ("Okay, let's look at another fun activitiy to do today...")
             print (" ")
